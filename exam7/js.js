@@ -6,20 +6,11 @@ let result=document.getElementById('result')
 
 
 async function getAPI(){
-    try{const response=await fetch(API)
+    try{
+        const response=await fetch(API)
     const data=await response.json()
     console.log('деректер орындалуда:',data)
-   if(response.ok){ 
-         result.innerHTML='Деректер сатти алынды'
-         const random=Math.floor(Math.random()*data.record.tasks.length)
-         console.log('random:',random)
-         //box.innerHTML=data.record.tasks[random].task
-         button.addEventListener('click',()=>{
-             box.innerHTML=data.record.tasks[random].answer
-         
  
-         })
-        }
         }catch(error){ 
         console.log('деректер сатты алынбады:',error)
 
